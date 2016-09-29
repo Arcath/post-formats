@@ -1,0 +1,12 @@
+#post_formats_gallery{
+  overflow:auto;
+}
+
+#post_format_gallery_list li{
+  float:left;
+  margin:5px;
+}
+
+#post_format_gallery_list li a{
+  text-align:center;
+}

@@ -52,12 +52,16 @@ function gallery_box(){
     })
 
     wp.media.frames.galleryBox.on('select', function(){
-      media_attachment = wp.media.frames.galleryBox.state().get('selection').first().toJSON()
-      jQuery('#post_format_gallery_list').append('<li>\
-      <img src="' + media_attachment.sizes.thumbnail.url + '" /><br />\
-      <input type="hidden" name="post_format_gallery[]" value="' + media_attachment.id + '" />\
-      <a href="#" class="gallery_remove">Remove</a>\
-      </li>')
+      selection = wp.media.frames.galleryBox.state().get('selection').toJSON()
+
+      for(var media_attachment_key in selection){
+        media_attachment = selection[media_attachment_key]
+        jQuery('#post_format_gallery_list').append('<li>\
+        <img src="' + media_attachment.sizes.thumbnail.url + '" /><br />\
+        <input type="hidden" name="post_format_gallery[]" value="' + media_attachment.id + '" />\
+        <a href="#" class="gallery_remove">Remove</a>\
+        </li>')
+      }
 
       jQuery('.gallery_remove').on('click', function(){
         event.preventDefault()

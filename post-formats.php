@@ -180,7 +180,7 @@ class PostFormats{
         <img src="<?php echo(wp_get_attachment_image_src($image, 'thumbnail')[0]); ?>" id="post_format_image_thumb" />
       </p>
       <input type="hidden" id="post_format_image" name="post_format_image" value="<?php echo($image); ?>" />
-      <input type="button" id="post_format_image_select" value="<?php _e('Select Image', 'post_formats'); ?>" />
+      <input type="button" id="post_format_image_select" value="<?php _e('Select Image', 'post-formats'); ?>" />
     <?php
   }
 

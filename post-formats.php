@@ -29,7 +29,7 @@ class PostFormats{
 
     $parts = explode(get_template(), dirname(__FILE__));
 
-    $url = str_replace('\\', '/', $base . $parts[1]);
+    $url = str_replace('\\', '/', $base . array_pop($parts) );
 
     return $url;
   }

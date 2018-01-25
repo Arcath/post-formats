@@ -2,11 +2,11 @@
 
 Provides meta boxes and all required code to get the WordPress post formats working in the admin panel.
 
-_does not provide any helpers for displaying in your theme._
+_Does not provide any helpers for displaying in your theme._
 
 ## Install
 
-You can install through composer
+You can install through composer using the command:
 
 ```
 composer require arcath/post-formats
